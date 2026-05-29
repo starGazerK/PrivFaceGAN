@@ -1,12 +1,12 @@
-# Face Identity Privacy Protection via Style Transfer
-
+<div align="center">
+  <h1><b> Face Identity Privacy Protection via Style Transfer </b></h1>
+</div>
 
 <p align="center">
   <a href="https://www.python.org/downloads/"><img src="https://img.shields.io/badge/python-3.8+-blue.svg" alt="Python 3.8+"></a>
   <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg" alt="PyTorch"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License"></a>
 </p>
-
 
 Privacy-preserving face recognition that applies neural style transfer to anonymize facial images, ensuring that **machines can still recognize the identity while humans cannot**.
 
