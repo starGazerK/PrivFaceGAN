@@ -26,10 +26,14 @@ The generated images are visually distinct from the originals — a human observ
 
 Given an original face image $x$, a pre-trained generator $G$ produces an anonymized version $\hat{x} = G(x)$, which satisfies two competing objectives:
 
+<div align="center">
+
 | Objective | Metric |
-|---|---|
+|:---:|:---:|
 | **Utility** — the anonymized image remains recognizable | Recognition accuracy on $\hat{x}$ |
 | **Privacy** — human-visible attributes are obscured | Drop in attribute classification accuracy between $x$ and $\hat{x}$ |
+
+</div>
 
 Five binary privacy attributes from CelebA are used as the protection targets: **Male**, **Wavy Hair**, **Oval Face**, **Pointy Nose**, and **Bags Under Eyes**.
 
@@ -67,11 +71,15 @@ Before adversarial training, all original face images undergo neural style trans
 
 Three training strategies were explored to balance the privacy–utility trade-off:
 
+<div align="center">
+  
 | Strategy | Description | Stability |
 |:---:|:---:|:---:|
 | **Normal** | Train on all 5 privacy attributes simultaneously each batch | Most stable |
 | **Entropy** | Focus on the single worst-protected attribute per batch | Prone to overfitting |
 | **K-Beam** | Select the worst attribute, train 5 rounds per batch on it | Moderate |
+
+</div>
 
 The **Normal** strategy achieved the best and most consistent results.
 
